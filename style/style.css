@@ -547,3 +547,47 @@ canvas {
     width: fit-content;
     white-space: nowrap;
 }
+
+/* ---- Scattered Photo Slide ---- */
+.scattered-slide {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.scattered-title {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.scattered-container {
+    position: relative;
+    width: 90%;
+    height: 70vh;
+}
+
+.scatter {
+    position: absolute;
+    width: 180px;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
+    transform: rotate(var(--angle));
+    transition: transform 0.3s ease;
+    cursor: pointer;
+}
+
+.scatter:hover {
+    transform: scale(1.1) rotate(var(--angle));
+}
+
+/* Positions */
+.p1 { top: 10%; left: 15%; --angle: -10deg; }
+.p2 { top: 25%; right: 10%; --angle: 8deg; }
+.p3 { bottom: 15%; left: 20%; --angle: -5deg; }
+.p4 { bottom: 20%; right: 25%; --angle: 12deg; }
+.p5 { top: 40%; left: 50%; transform: translateX(-50%) rotate(3deg); }

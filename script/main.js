@@ -283,7 +283,7 @@ const animationTimeline = () => {
         y: 30,
         zIndex: "-1"
       })
-      .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
+       .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
       .to(
           ".last-smile",
           0.5,
@@ -291,7 +291,19 @@ const animationTimeline = () => {
             rotation: 90
           },
           "+=1"
-      );
+      )
+      .fromTo(".scattered-slide", 1,
+        { opacity: 0, y: 50 },
+        { opacity: 1, y: 0, ease: Expo.easeOut }
+      )
+      .staggerFrom(".scattered-container .scatter", 1, {
+            opacity: 0,
+            scale: 0.6,
+            rotation: 45,
+            x: () => Math.random() * 200 - 100,
+            y: () => Math.random() * 200 - 100,
+            ease: Expo.easeOut
+      }, 0.2);
 
   // tl.seek("currentStep");
   // tl.timeScale(2);
