@@ -292,6 +292,7 @@ const animationTimeline = () => {
           },
           "+=1"
       )
+      .call(() => console.log('Timeline reaching scattered slide animation'))
       .fromTo(".scattered-slide", 1,
         { opacity: 0, y: 50 },
         { opacity: 1, y: 0, ease: Expo.easeOut }

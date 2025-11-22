@@ -550,17 +550,25 @@ canvas {
 
 /* ---- Scattered Photo Slide ---- */
 .scattered-slide {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
     height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
+    z-index: 100;
+    background: white;
+    opacity: 0;
+    pointer-events: none;
 }
 
 .scattered-title {
-    font-size: 3rem;
-    margin-bottom: 20px;
+    font-size: 3.5rem;
+    margin-bottom: 40px;
+    margin-top: -60px;
     font-weight: bold;
 }
 
@@ -572,7 +580,7 @@ canvas {
 
 .scatter {
     position: absolute;
-    width: 180px;
+    width: 300px;       
     height: auto;
     border-radius: 12px;
     box-shadow: 0 6px 20px rgba(0,0,0,0.2);
@@ -586,8 +594,8 @@ canvas {
 }
 
 /* Positions */
-.p1 { top: 10%; left: 15%; --angle: -10deg; }
-.p2 { top: 25%; right: 10%; --angle: 8deg; }
-.p3 { bottom: 15%; left: 20%; --angle: -5deg; }
-.p4 { bottom: 20%; right: 25%; --angle: 12deg; }
-.p5 { top: 40%; left: 50%; transform: translateX(-50%) rotate(3deg); }
+.p1 { top: 5%; left: 10%; --angle: -10deg; }
+.p2 { top: 15%; right: 8%; --angle: 8deg; }
+.p3 { bottom: 10%; left: 15%; --angle: -5deg; }
+.p4 { bottom: 15%; right: 20%; --angle: 12deg; }
+.p5 { top: 38%; left: 50%; transform: translateX(-50%) rotate(3deg); }
