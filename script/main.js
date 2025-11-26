@@ -363,7 +363,7 @@ let x = setInterval(function () {
                 <div class="flame"></div>
             </div>
             <div class="prompt">
-            Coba pencet deh
+            Press This!!!
             </div>
         </div>
     `;

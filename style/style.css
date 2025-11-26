@@ -6,6 +6,7 @@ body {
     margin: 0;
     font-family: "Work Sans", sans-serif;
     overflow: hidden;
+    background: linear-gradient(135deg, #ffe6f0 0%, #fff0f5 50%, #ffe6e6 100%);
 }
 
 
@@ -29,6 +30,7 @@ canvas {
     align-items: center;
     overflow: hidden;
     flex-direction: column;
+    background: linear-gradient(135deg, #ffe6f0 0%, #fff0f5 50%, #ffe6e6 100%);
 }
 
 #containerzero button {
@@ -83,6 +85,7 @@ canvas {
     visibility: hidden;
     position: relative;
     overflow: hidden;
+    background: linear-gradient(135deg, #ffe6f0 0%, #fff0f5 50%, #ffe6e6 100%);
 }
 
 .container div.six {
@@ -560,7 +563,7 @@ canvas {
     justify-content: center;
     align-items: center;
     z-index: 100;
-    background: white;
+    background: linear-gradient(135deg, #ffe6f0 0%, #fff0f5 50%, #ffe6e6 100%);
     opacity: 0;
     pointer-events: none;
 }
@@ -570,6 +573,7 @@ canvas {
     margin-bottom: 40px;
     margin-top: -60px;
     font-weight: bold;
+    font-family: "Georgia", serif; 
 }
 
 .scattered-container {
@@ -594,8 +598,8 @@ canvas {
 }
 
 /* Positions */
-.p1 { top: 5%; left: 10%; --angle: -10deg; }
-.p2 { top: 15%; right: 8%; --angle: 8deg; }
-.p3 { bottom: 10%; left: 15%; --angle: -5deg; }
-.p4 { bottom: 15%; right: 20%; --angle: 12deg; }
+.p1 { top: 0%; left: 3%; --angle: -10deg; width: 500px; }  /* kiri atas */
+.p2 { top: -10%; right: 10%; --angle: 30deg; }              /* kanan atas */
+.p3 { bottom: 0%; left: 10%; --angle: -5deg; }         /* kiri bawah */
+.p4 { bottom: 2%; right: 7%; --angle: 12deg; width: 350px; }    /* kanan bawah */
 .p5 { top: 38%; left: 50%; transform: translateX(-50%) rotate(3deg); }
