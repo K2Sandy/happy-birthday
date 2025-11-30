@@ -6,7 +6,11 @@ body {
     margin: 0;
     font-family: "Work Sans", sans-serif;
     overflow: hidden;
-    background: linear-gradient(135deg, #ffe6f0 0%, #fff0f5 50%, #ffe6e6 100%);
+    background: linear-gradient(135deg,
+        #ffeef5 0%,
+        #ffd9e6 50%,
+        #ffcce0 100%
+    );
 }
 
 
@@ -30,8 +34,14 @@ canvas {
     align-items: center;
     overflow: hidden;
     flex-direction: column;
-    background: linear-gradient(135deg, #ffe6f0 0%, #fff0f5 50%, #ffe6e6 100%);
+    background: linear-gradient(135deg,
+        #ffeef5 0%,
+        #ffd9e6 50%,
+        #ffcce0 100%
+    );
 }
+
+
 
 #containerzero button {
     background-color: #EA4C89;
@@ -85,8 +95,13 @@ canvas {
     visibility: hidden;
     position: relative;
     overflow: hidden;
-    background: linear-gradient(135deg, #ffe6f0 0%, #fff0f5 50%, #ffe6e6 100%);
+    background: linear-gradient(135deg,
+        #ffeef5 0%,
+        #ffd9e6 50%,
+        #ffcce0 100%
+    );
 }
+
 
 .container div.six {
     top: 10vh;
