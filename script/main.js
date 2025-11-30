@@ -268,29 +268,29 @@ const animationTimeline = () => {
       )
       .staggerTo(
           ".eight svg",
-          1.5,
+          0.8,
           {
             visibility: "visible",
             opacity: 0,
             scale: 80,
-            repeat: 3,
-            repeatDelay: 1.4
+            repeat: 2,
+            repeatDelay: 0.8
           },
-          0.3
+          0.15
       )
-      .to(".six", 0.5, {
+      .to(".six", 0.3, {
         opacity: 0,
-        y: 30,
+        y: 20,
         zIndex: "-1"
       })
-       .staggerFrom(".nine p", 1, ideaTextTrans, 1.2)
+       .staggerFrom(".nine p", 0.6, ideaTextTrans, 0.4)
       .to(
           ".last-smile",
-          0.5,
+          0.35,
           {
             rotation: 90
           },
-          "+=1"
+          "+=0.2"
       )
       .call(() => console.log('Timeline reaching scattered slide animation'))
       .fromTo(".scattered-slide", 1,
@@ -476,4 +476,35 @@ function conveti() {
   canvas.width = W;
   canvas.height = H;
   Draw();
+}
+
+// Image Carousel for Memories Slide
+const initImageCarousel = () => {
+  let currentSet = 1;
+  const imageSet1 = document.querySelector('.image-set-1');
+  const imageSet2 = document.querySelector('.image-set-2');
+
+  // Set initial state
+  if (imageSet1) imageSet1.classList.add('active');
+  if (imageSet2) imageSet2.classList.remove('active');
+
+  // Toggle between sets every 5 seconds
+  setInterval(() => {
+    currentSet = currentSet === 1 ? 2 : 1;
+    
+    if (currentSet === 1) {
+      imageSet1.classList.add('active');
+      imageSet2.classList.remove('active');
+    } else {
+      imageSet1.classList.remove('active');
+      imageSet2.classList.add('active');
+    }
+  }, 5000); // Change every 5 seconds
+};
+
+// Start carousel when page loads
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', initImageCarousel);
+} else {
+  initImageCarousel();
 }

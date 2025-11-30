@@ -567,9 +567,9 @@ canvas {
     justify-content: center;
     align-items: center;
     z-index: 100;
-    pointer-events: auto;
+    pointer-events: none;
     background: transparent;
-    opacity: 1;  /* make visible by default for debugging/restore */
+    opacity: 0;  /* keep this if controlled by JS */
 }
 
 /* ✨ Glow effect animation */
@@ -590,7 +590,7 @@ canvas {
         url("https://i.imgur.com/FOdgdAx.png");
     background-repeat: repeat;
     background-attachment: fixed;
-    opacity: 0.8;
+    opacity: 0.8 ;
     pointer-events: none;
     z-index: 1;
 }
@@ -602,10 +602,8 @@ canvas {
     margin-top: -60px;
     font-weight: bold;
     font-family: "Georgia", serif;
+    z-index: 2;
     position: relative;
-    z-index: 4; /* bring title above background hearts */
-    color: #8b2345;
-    text-shadow: 0 2px 6px rgba(0,0,0,0.15);
 }
 
 .scattered-container {
@@ -636,3 +634,60 @@ canvas {
 .p3 { bottom: 0%; left: 10%; --angle: -5deg; }         /* kiri bawah */
 .p4 { bottom: 2%; right: 7%; --angle: 12deg; width: 350px; }    /* kanan bawah */
 .p5 { top: 38%; left: 50%; transform: translateX(-50%) rotate(3deg); }
+/* ---- Custom Positions for Set 2 ---- */
+.image-set-2 .q1 { 
+    top: -10%; 
+    left: 10%; 
+    --angle: 10deg; 
+    width: 250px; 
+}
+
+.image-set-2 .q2 { 
+    top: -15%; 
+    right: 10%; 
+    --angle: -20deg; 
+    width: 280px;
+}
+
+.image-set-2 .q3 { 
+    bottom: -10%; 
+    left: 10%; 
+    --angle: -25deg; 
+    width: 250px; 
+}
+
+.image-set-2 .q4 { 
+    bottom: -10%; 
+    right: 10%; 
+    --angle: 10deg; 
+    width: 290px;
+}
+
+.image-set-2 .q5 { 
+    top: 20%; 
+    left: 50%; 
+    transform: translateX(-50%) rotate(4deg);
+    width: 450px; 
+}
+
+
+/* Image carousel sets */
+.image-set {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    transition: opacity 1s ease-in-out;
+    pointer-events: none;
+}
+
+.image-set.active {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.image-set .scatter {
+    position: absolute;
+}
