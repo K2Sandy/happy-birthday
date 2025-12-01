@@ -283,20 +283,24 @@ const animationTimeline = () => {
         y: 20,
         zIndex: "-1"
       })
-       .staggerFrom(".nine p", 0.6, ideaTextTrans, 0.4)
-      .to(
-          ".last-smile",
-          0.35,
-          {
-            rotation: 90
-          },
-          "+=0.2"
-      )
+.staggerTo(".nine p", 0.8, { opacity: 1, y: -20 }, 1.2)
+.to(".last-smile", 0.35, { rotation: 90 }, "+=0.2")
+
+// 🔴 Fade out the entire outro before memories appear
+.to(".nine", 0.8, { opacity: 0, y: -50 }, "+=0.5")
+
+// 🌸 Then show scattered slide (memories)
+.to(".scattered-slide", 1, {
+    opacity: 1,
+    y: 0,
+    zIndex: 101,
+    pointerEvents: "auto",
+    ease: Expo.easeOut
+})
+
+
       .call(() => console.log('Timeline reaching scattered slide animation'))
-      .fromTo(".scattered-slide", 1,
-        { opacity: 0, y: 50 },
-        { opacity: 1, y: 0, ease: Expo.easeOut }
-      )
+
       .staggerFrom(".scattered-container .scatter", 1, {
             opacity: 0,
             scale: 0.6,
@@ -488,19 +492,22 @@ const initImageCarousel = () => {
   if (imageSet1) imageSet1.classList.add('active');
   if (imageSet2) imageSet2.classList.remove('active');
 
-  // Toggle between sets every 5 seconds
-  setInterval(() => {
-    currentSet = currentSet === 1 ? 2 : 1;
-    
-    if (currentSet === 1) {
-      imageSet1.classList.add('active');
-      imageSet2.classList.remove('active');
-    } else {
-      imageSet1.classList.remove('active');
-      imageSet2.classList.add('active');
-    }
-  }, 5000); // Change every 5 seconds
+  // ⏳ Hold the first image set longer before starting auto-switch
+  setTimeout(() => {
+    setInterval(() => {
+      currentSet = currentSet === 1 ? 2 : 1;
+
+      if (currentSet === 1) {
+        imageSet1.classList.add('active');
+        imageSet2.classList.remove('active');
+      } else {
+        imageSet1.classList.remove('active');
+        imageSet2.classList.add('active');
+      }
+    }, 5000); // Normal 5s loop
+  }, 7000); // ⏳ First group stays longer (7s) before first switch
 };
+
 
 // Start carousel when page loads
 if (document.readyState === 'loading') {

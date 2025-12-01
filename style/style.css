@@ -314,11 +314,29 @@ canvas {
 .nine p {
     font-size: 2rem;
     font-weight: lighter;
-    opacity: 0;
-    position: absolute;
-    bottom: -100px;
+    opacity: 0;                 /* GSAP will animate this */
+    position: static !important; /* 👈 removes absolute stacking */
+    margin: 10px 0;             /* spacing between lines */
     pointer-events: none;
+    text-align: center;
+    transform: none !important; /* reset leftover transform */
 }
+
+
+.nine {
+    position: fixed !important;   /* Change this from relative → fixed */
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 200;                 /* Above scattered slide, but below rest */
+    display: flex;               /* Make centering work */
+    flex-direction: column;      
+    justify-content: center;     /* Center vertically */
+    align-items: center;         /* Center horizontally */
+    height: auto;               /* Remove 100vh to avoid stretching */
+    text-align: center;         /* Optional: center text alignment */
+}
+
 
 #replay {
     z-index: 3;
@@ -581,11 +599,12 @@ canvas {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    z-index: 100;
+    z-index: -1; /* 👈 changed from 100 to -1 */
     pointer-events: none;
     background: transparent;
-    opacity: 0;  /* keep this if controlled by JS */
+    opacity: 0;  /* keep this — hidden at start */
 }
+
 
 /* ✨ Glow effect animation */
 @keyframes romanticGlow {
