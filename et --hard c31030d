@@ -1,0 +1,51 @@
+[33m5e82298[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mmaster[m[33m)[m aaa
+[33m06a346e[m k
+[33m1adde43[m kk
+[33ma664c2b[m aaa
+[33m0c3dd28[m aaddons
+[33m03cafd7[m jj
+[33m9493797[m add
+[33med06cc2[m picture
+[33m73fd71f[m a
+[33m19cf07f[m aa
+[33mc51b086[m tes2 aja
+[33m719fe55[m Delete aaaaa
+[33m15bbf84[m Add new file 'aaaaa' with initial content
+[33m207e416[m Update name from 'Nad!' to 'Aliah'
+[33m2b85e41[m add: cake
+[33m39b0c14[m add: prompt
+[33md476112[m add: prompt
+[33me41e64d[m add: audio
+[33m6683b24[m add: audio
+[33m4c96ae5[m init
+[33m98844ee[m Merge pull request #89 from MarketingPip/patch-1
+[33m388b2a9[m Update LICENSE year
+[33mb1ec97f[m Create LICENSE
+[33m5f753c2[m Update README.md
+[33mc25c947[m Merge pull request #47 from faahim/json-update
+[33mc763dc8[m added support for customising all content via JSON
+[33m918498d[m dropped babel transpiling
+[33m13823a2[m changed greet message
+[33m1d0f196[m updated instuction
+[33m87d5a47[m updated files to accept data from json
+[33m148efdb[m added json file to enable esay customization
+[33m04d2fb1[m added id's on nodes to customize
+[33me84b2b0[m fixed typo
+[33m43acec3[m added README
+[33m6dffc21[m added favicon icon
+[33mc250208[m changes subtitle font size
+[33m015f880[m added custom font
+[33m99db3cc[m added more responsive fixes
+[33m68b0182[m fixed a few responsive issues
+[33mc61770c[m removed seek points from animation
+[33mc962de5[m fixed hat position for different screens
+[33me0ebb32[m first complete iteration
+[33m3f71b63[m added flying baloons animations
+[33mfc72841[m added svg baloons
+[33m0db870f[m created initial animation timeline
+[33mf348f14[m added images
+[33mf89a97d[m removed gsap npm package
+[33m1e707d7[m added babel and gsap cdn
+[33m4e1b464[m added gsap npm package
+[33mbbd7885[m added initial files
+[33me3ffb93[m initial commit
